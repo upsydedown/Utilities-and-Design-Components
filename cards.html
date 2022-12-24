@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0rem;
+            margin: 0rem;
+        }
+
+        body {
+            background-color: navy;
+        }
+
+        #home-body {
+            justify-content: space-evenly;
+            border: 5px solid red;
+            min-width: 20rem;
+            max-width: 100%;
+            flex-flow: row wrap;
+            gap: 0.5rem;
+            padding: 2rem 0.5rem 2rem 0.5rem;
+        }
+
+        .cards {
+            flex-flow: column wrap;
+            max-width: 33.3rem;
+            border: 5px solid green;
+            border-radius: 15px;
+            margin: 0rem 0rem 0.5rem 0rem; 
+            padding: 0.8rem 1rem 0.8rem 1rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .cards:hover {
+            transform: scale(1.05);
+            background-color: rgb(0, 129, 241);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .text {
+            padding: 0rem 2.5rem 0rem 0rem;
+            color: white;
+            text-align: justify;
+            flex-flow: column wrap;
+        }
+
+        .card-image {
+            flex-flow: column wrap;
+            max-width: 24rem;
+            min-width: 18rem;
+            height: 10rem;
+            margin: 1rem 0rem 1rem -1.5rem;
+        }
+
+        @media (min-width: 700px) and (max-width: 1920px) {
+            
+            .text {
+            padding: 0rem 1.5rem 0rem 0rem;
+        }
+            .card-image {
+                max-width: 33rem;
+                height: 12rem;
+                margin: 1rem 0rem 1rem -1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="home-section" class="container">
+        <div id="home-body" class="container">
+            <div class="cards container" id="card1">
+                <h1 class="text container">Who are We</h1>
+                <img class="card-image container" src="01.jpg" alt="">
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime officiis nam illum
+                    dolore maiores
+                    labore tenetur. Nostrum repudiandae a voluptatibus fugit, temporibus in at optio, aspernatur maxime
+                    quisquam dolorem facilis!</p>
+            </div>
+            <div class="cards container" id="card2">
+                <h1 class="text container">Who are We</h1>
+                <img class="card-image" src="01.jpg" alt="">
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime officiis nam illum
+                    dolore maiores
+                    labore tenetur. Nostrum repudiandae a voluptatibus fugit, temporibus in at optio, aspernatur maxime
+                    quisquam dolorem facilis!</p>
+            </div>
+            <div class="cards container" id="card3">
+                <h1 class="text container">Who are We</h1>
+                <img class="card-image" src="01.jpg" alt="">
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime officiis nam illum
+                    dolore maiores
+                    labore tenetur. Nostrum repudiandae a voluptatibus fugit, temporibus in at optio, aspernatur maxime
+                    quisquam dolorem facilis!</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
