@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0rem;
+            margin: 0rem;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: navy;
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #main {
+            font-size: 5rem;
+            color: whitesmoke;
+        }
+
+        #temp {
+            position: relative;
+            top: -0.25rem;
+            font-size: 4rem;
+        }
+
+        .outerDiv {
+            border: 5px ridge rgb(42, 42, 170);
+            padding: 1.5rem;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerDiv">
+        <div class="innerDiv">
+            <h1 id="main"> The Thermometer <span id="temp" class="fa"></span></h1>
+        </div>
+    </div>
+</body>
+<script>
+    const tempLoad = () => {
+        let temp = document.getElementById('temp');
+        temp.innerHTML = "&#xf2cb";
+        temp.style.color = "green";
+        setTimeout(() => {
+            temp.innerHTML = "&#xf2ca";
+        }, 500)
+        setTimeout(() => {
+            temp.innerHTML = "&#xf2c9";
+        }, 1000)
+        setTimeout(() => {
+            temp.innerHTML = "&#xf2c8";
+        }, 1500)
+        setTimeout(() => {
+            temp.innerHTML = "&#xf2c7";
+            temp.style.color = "red";
+        }, 2000)
+
+    }
+    tempLoad();
+    setInterval(tempLoad, 2500);
+
+</script>
+
+</html>
